@@ -1,0 +1,3 @@
+# python_varios
+
+Varias cosas hechas en Python...
