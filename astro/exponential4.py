@@ -17,9 +17,10 @@ for j in range(10):
 
     N = np.zeros(len(t))
     N[0] = N0
+    N[1] = N[0]*(1 - dt/tau)
 
-    for i in range(steps - 1):
-        N[i + 1] = N[i]*(1 - dt/tau)
+    for i in range(1,steps - 1):
+        N[i + 1] = N[i - 1] - N[i]*2.0*dt/tau
 
     error.append((answer - N[steps-1]) / answer)
     stepsize.append(dt)

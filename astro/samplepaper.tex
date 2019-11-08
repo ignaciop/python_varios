@@ -1,0 +1,138 @@
+\documentclass{emulateapj}
+
+\shorttitle{Accretion Disks in 2D HL Flow}
+\shortauthors{Blondin}
+
+\begin{document}
+ 
+\title{Accretion Disks in Two-Dimensional Hoyle-Lyttleton Flow}
+
+\author{John M. Blondin}
+\affil{Department of Physics, North Carolina State University, Raleigh, NC 27695-8202}
+\email{John\_Blondin@ncsu.edu}
+
+\begin{abstract}
+
+We investigate the flip-flop instability observed in two dimensional planar hydrodynamic simulations 
+of Hoyle-Lyttleton accretion in the case of an accreting object with a radius much smaller
+than the nominal accretion radius, as one would expect in astrophysically relevant situations.
+Contrary to previous results with larger accretors, accretion from a homogenous
+medium onto a small accretor is characterized by a robust, quasi-Keplerian accretion disk. 
+
+\end{abstract}
+
+
+
+\section{Introduction}
+
+The accretion-driven X-ray luminosity of many high-mass X-ray binaries is often modeled in terms of the classical
+Hoyle-Lyttleton accretion theory (hereafter referred to as HLA). 
+\cite{do73} originally proposed the accretion of a companion stellar wind as the source of X-ray luminosity from Cyg X-3.
+
+The HLA problem is parameterized by an object of mass $M$ moving at a speed $V_\infty$ through a uniform 
+medium of density $\rho_\infty$.  Using ballistic orbits (neglecting pressure effects), \cite{hl39a} defined an accretion radius given by
+\begin{equation}
+R_a=\frac{2GM}{V_\infty^2},
+\end{equation}
+such that gas approaching the star with an impact parameter less than $R_a$ would collide on an accretion line 
+behind the star and would be left with insufficient kinetic energy to escape the gravitational potential of the star.  
+This model predicts a mass accretion rate given by the mass flux through a circle of radius $R_a$ far upstream:
+\begin{equation}
+\dot M_{HL} = \pi R_a^2 V_\infty \rho_\infty.
+\label{eqn:mdot}
+\end{equation}
+
+Given the symmetry of this idealized model and the assumption that the accretion is dictated by the upstream flow,
+the angular momentum accretion rate is identically zero: $\dot J_{HL}= 0$.
+
+This estimate of the mass accretion rate was confirmed by two-dimensional, time-independent calculations of axisymmetric accretion flow.
+For an upstream Mach number of 2.4, \cite{h71} found
+an accretion rate of $0.88\, \dot M_{HL}$.  This is within 3\% of the expected value if one corrects for the finite Mach 
+number \citep{bondi52}.  Time-dependent simulations of axisymmetric accretion exhibit steady flow with mass accretion
+rates close to this analytic prediction.
+Despite this agreement between Equation (\ref{eqn:mdot}) and numerical simulations, it is important to note that the flow does not follow a ballistic
+trajectory all the way to an accretion column on the back side of the accretor.
+For an ideal gas with a ratio of specific heats of $\gamma=5/3$, axisymmetric accretion flows are characterized by a
+leading bow shock \citep{h71} rather than a trailing accretion line as originally envisioned by \cite{hl39a}.  
+
+The magnitude of the angular momentum accretion rate is less certain when one considers the context of wind accretion in a close binary system.  
+In the original application of HLA to X-ray binaries, \citet{do73} pointed out that the orbital motion of the accreting neutron
+star leads to a relative flow velocity that is no longer radially away from the donor star.  This, combined with the 
+decreasing density of the wind from the
+donor star due to spherical divergence, leads to a variation of the wind density across the face of the accretion cylinder.  The 
+assumption that all matter flowing within the accretion cylinder will be accreted led them to estimate a relatively large value for $\dot J$.
+\citet{sl76} accounted for the changes in the accretion radius due to an accelerating wind, but found that the dominant effect was
+still the variation of the wind density, predicting a large $\dot J$ in wind-fed X-ray binaries.  In contrast, \citet{dp80} argued that,
+following the original argument of momentum balance on a trailing accretion column \citep{hl39a}, any upstream gradients would simply lead
+to a displacement of this column that forced $\dot J = 0$.
+
+This scenario of wind-fed accretion in a binary system was investigated numerically by \citet{mis87}.  
+They presented two-dimensional simulations of the gas flow in the equatorial
+plane of a semi-detached binary system with a mass ratio of unity.  They found that wind-fed accretion can lead to
+accretion of significant angular momentum.  Moreover, most of their models exhibited unsteady flow.  In the most violent examples,
+an asymmetric bow shock flipped from one side to the other, leading to alternating clockwise and counter-clockwise rotating flows
+about the accreting compact star.  
+
+
+
+
+
+
+The highest mass accretion rate
+occurs in brief flares that last of order 100 orbital periods at the surface of the accretor, or roughly one minute for
+canonical X-ray binary parameters.  For reference, the orbital period at the surface of the accretor
+is $5\times 10^{-4}\,(R_a/V_\infty)$ for this model.  
+These flares are the result of accretion of high-density structures within the accretion disk.
+The density pattern shown in Figure \ref{fig:disks}
+exhibits a relatively tightly-wound one-armed spiral.  This spiral pattern continually changed throughout the evolution, but the flow
+remained nearly Keplerian (within 20\%) out to $10\, R_s$.  The Mach number in this disk varies between one and two.  
+Describe time evolution - waves pushing out on bow shock.  Note that the strong spiral shocks in this relatively low-Mach disk lead to 
+very effective radial transport of mass and angular momentum and hence a relatively brief residence time of the high-density 
+structures in the disk.  
+
+\begin{figure}[!htp]
+\begin{center}
+\includegraphics[width=3.25in]{f3}
+\caption{Density structure in the $\gamma=5/3$ model at randomly selected times.  Each panel has a width of $R_a$ - at this scale
+the accreting star is unresolved.  The highest density is shown in red.}
+\label{fig:disks}
+\end{center}\end{figure}
+
+
+
+\section{Discussion}
+
+Under the restriction of adiabatic two dimensional planar flow, gravitational accretion onto a star with $R_s \ll R_a$ does not behave according to 
+classical HLA. Rather, accretion in this regime is characterized by a quasi-Keplerian
+accretion disk, a mass accretion rate much less than that predicted by HLA, and an angular momentum accretion rate appropriate to
+disk accretion.
+
+In this disk mode, the accretion of mass and angular momentum is unrelated to the flux through an accretion cylinder far upstream.
+The mass accretion rate in such a disk phase is determined not by the upstream flow, but by the efficiency of 
+spiral shocks (or other physical mechanisms not included in our simulations) in transporting angular momentum 
+outwards and mass inwards through the disk.  Similarly, the specific angular momentum of the accreted gas is determined solely by
+the conditions at the inner edge of the accretion disk.  Furthermore, the rotational direction of the disk is set by the 
+morphology of the accretion bow shock (which is dynamically interacting with the disk flow itself),
+not by the presence of a net angular momentum flowing through an upstream accretion cylinder. 
+
+
+\begin{thebibliography}{}
+
+\bibitem[Bondi(1952)]{bondi52}Bondi, H. 1952, MNRAS, 112, 195
+
+\bibitem[Davidson \& Ostriker(1973)]{do73}Davidson, K., \& Ostriker, J. P. 1973, ApJ, 179, 585
+
+\bibitem[Davies \& Pringle(1980)]{dp80}Davies, R. E., \& Pringle, J. E. 1980, MNRAS, 191, 599
+
+\bibitem[Hunt(1971)]{h71}Hunt, R. 1971, MNRAS, 154, 141
+
+\bibitem[Hoyle \& Lyttleton(1939)]{hl39a}Hoyle, F., \& Lyttleton R. A. 1939, Proc, Cambridge Phil. Soc., 35, 405
+
+\bibitem[Matsuda et al.(1987)]{mis87}Matsuda, T., Inoue, M., \& Sawada, K. 1987, MNRAS 226, 785
+
+\bibitem[Shapiro \& Lightman(1976)]{sl76}Shapiro, S. L., \& Lightman, A. P. 1976, ApJ, 204, 555
+
+\end{thebibliography}
+\clearpage
+
+\end{document}
